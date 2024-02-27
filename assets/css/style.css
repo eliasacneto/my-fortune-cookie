@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body,
+button {
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background: linear-gradient(45deg, #190361, #bb00ff);
+  animation: gradient 10s ease infinite;
+  background-size: 200% 200%;
+  font-size: 1.6rem;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+button {
+  background-color: #ff9500;
+  color: #fff;
+  border-radius: 0.4rem;
+  font-size: 1.5rem;
+  font-family: "DM Sans", sans-serif;
+  font-weight: bold;
+  border: none;
+  padding: 1.6rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #ff9500ec;
+}
+
+main {
+  background: #fff;
+  box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.1);
+  border-radius: 0.6rem;
+  padding: 4.8rem 6.4rem 6.4rem;
+
+  width: min(42.8rem, 90%);
+  margin: 0 auto;
+  margin-top: -12rem;
+  text-align: center;
+}
+
+.hide {
+  display: none;
+}
+
+/* Screen 1 */
+p {
+  margin-top: 1.4rem;
+  margin-bottom: 2rem;
+}
+
+#btnOpenMessage {
+  cursor: pointer;
+  animation: shake 0.5s;
+}
+
+#btnOpenMessage:hover {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+
+/* Screen 2 */
+
+.message {
+  font-family: "Dancing Script", sans-serif;
+  font-size: 2.4rem;
+  font-weight: 400;
+  background-color: #e4edf1;
+  margin-top: 1.4rem;
+  margin-bottom: 2rem;
+  padding: 1.6rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  position: relative;
+  animation: zoom 2s ease-in-out;
+}
+/* Definindo a animação */
+@keyframes zoom {
+  0% {
+    transform: translateY(100px) scale(0); /* Transformação inicial: mover para cima e escalar para 0 */
+  }
+  100% {
+    transform: translateY(0) scale(1); /* Transformação final: voltar à posição original e escalar para 1 */
+  }
+}
